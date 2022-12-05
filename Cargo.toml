@@ -1,0 +1,14 @@
+[package]
+name = "marius-parquet"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+arrow2 = {version="0.14.2", features=["parquet2", "io_parquet", "io_parquet_compression"]}
+aws-creds = "0.34.0"
+object_store = {version="0.5.1", features=["aws"]}
+futures = "0.3.25"
+range-reader = "0.2.0"
+tokio = "1.22.0"
