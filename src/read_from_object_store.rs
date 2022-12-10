@@ -1,14 +1,16 @@
-//! Read parquet files in parallel from the Object Store.
+//! Read parquet files in parallel from the Object Store by using the RangedAsyncReader.
 use futures::future::BoxFuture;
 use object_store::{path::Path, ObjectStore};
 use range_reader::{RangeOutput, RangedAsyncReader};
 use std::sync::Arc;
+use tracing;
 
 use arrow2::error::Error as ArrowError;
 use arrow2::io::parquet::read;
 
 type MyResult<T> = Result<T, String>;
 
+#[tracing::instrument]
 pub async fn parallel_read(
     object_store: Arc<dyn ObjectStore>,
     path: Path,

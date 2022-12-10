@@ -1,1 +1,1 @@
-Putting together arrow2 in async mode with the object_store.
+Backup failed! USB Copy_ mirror backup failed: backup file or folder failed: copy failed: write /Volume1/@usb/usbshare2/Family/2015/Voice/Alexys Nov 6/T011_20151106.mp3: no space left on device
